@@ -39,7 +39,9 @@ public class String1
      *  helloName("X") → "Hello X!"
      */
     public String helloName(String name) {
-        return unimplemented;
+        String n = name;
+        String h = "Hello " + n + "!";
+        return h;
     }
 
     /*
@@ -50,7 +52,10 @@ public class String1
      * makeAbba("What", "Up") → "WhatUpUpWhat"
      */
     public String makeAbba(String a, String b) {
-        return unimplemented;
+        String c = a;
+        String d = b;
+        String k = c+d+d+c;
+        return k;
     }
 
     /*
@@ -62,7 +67,8 @@ public class String1
      * makeTags("cite", "Yay") → "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        return unimplemented;
+        String b = "<"+tag+">" + word +"</"+tag+">";
+        return b;
     }
 
     /*
@@ -184,7 +190,7 @@ public class String1
     /*
      * Given two strings, append them together (known as "concatenation") and return the result. 
      * However, if the concatenation creates a double-char, then omit one of the chars, 
-     * 	so "abc" and "cat" yields "abcat".
+     *     so "abc" and "cat" yields "abcat".
      * conCat("abc", "cat") → "abcat"
      * conCat("dog", "cat") → "dogcat"
      * conCat("abc", "") → "abc"
@@ -196,7 +202,7 @@ public class String1
     /*
      *Given two strings, append them together (known as "concatenation") and return the result. 
      *However, if the strings are different lengths, omit chars from the longer string 
-     *	so it is the same length as the shorter string. 
+     *    so it is the same length as the shorter string. 
      *So "Hello" and "Hi" yield "loHi". 
      *The strings may be any length.
      *minCat("Hello", "Hi") → "loHi"
