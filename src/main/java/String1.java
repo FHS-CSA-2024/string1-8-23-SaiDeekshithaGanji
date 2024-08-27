@@ -82,9 +82,11 @@ public class String1
      * makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return unimplemented;
+        String str = out;
+        String k = str.substring(0,2) + word + str.substring(2,4);
+        return k;
     }
-
+    
     /*
      * Given a string, return a new string made of 3 copies of the last 2 chars of the original string. 
      * The string length will be at least 2.
@@ -93,7 +95,9 @@ public class String1
      * extraEnd("Hi") → "HiHiHi"
      */
     public String extraEnd(String str) {
-        return unimplemented;
+        String k = str.substring(3);
+        String p = k+k+k;
+        return p;
     }
 
     /*
@@ -106,7 +110,15 @@ public class String1
      * firstTwo("ab") → "ab"
      */
     public String firstTwo(String str) {
-        return unimplemented;
+        int k = str.length();
+        if (k > 2){
+            String p = str.substring(0,2);
+            return p;
+        }
+        else {
+            String f = str;
+            return f;   
+        }
     }
 
     /*
@@ -116,7 +128,11 @@ public class String1
      * firstHalf("abcdef") → "abc"
      */
     public String firstHalf(String str) {
-        return unimplemented;
+        int k = str.length();
+        int halfk = k/2;
+        
+        String p = str.substring(0,halfk+1);
+        return p;
     }
 
     /*
@@ -127,7 +143,15 @@ public class String1
      * withoutEnd("coding") → "odin"
      */
     public String withoutEnd(String str) {
-        return unimplemented;
+        int k = str.length();
+        if (k >= 2){
+            String p = str.substring(1,k-1);
+            return p;
+        }
+        else {
+            String f = str;
+            return f;   
+        }
     }
 
     /*
@@ -139,7 +163,16 @@ public class String1
      * comboString("aaa", "b") → "baaab"
      */
     public String comboString(String a, String b) {
-        return unimplemented;
+        int lengtha = a.length();
+        int lengthb = b.length();
+        
+        if (lengtha <= lengthb){
+            String p = a+b+a;
+            return p;
+        } else{
+            String k = b+a+b;
+            return k;
+        }
     }
 
     /*
@@ -150,7 +183,15 @@ public class String1
      * middleThree("solving") → "lvi"
      */
     public String middleThree(String str) {
-        return unimplemented;
+        int k = str.length();
+        if (k > 3){
+            String p = str.substring(1,4);
+            return p;
+        }
+        else {
+            String f = str;
+            return f;   
+        }
     }
 
     /*
@@ -161,7 +202,16 @@ public class String1
      * extraFront("H") → "HHH"
      */
     public String extraFront(String str) {
-        return unimplemented;
+        int k = str.length();
+        if (k >= 2){
+            String p = str.substring(0,2);
+            String okay = p+p+p;
+            return okay;
+        }
+        else {
+            String f = str+str+str;
+            return f;   
+        }
     }
 
     /*
