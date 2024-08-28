@@ -95,9 +95,10 @@ public class String1
      * extraEnd("Hi") → "HiHiHi"
      */
     public String extraEnd(String str) {
-        String k = str.substring(3);
-        String p = k+k+k;
-        return p;
+        int k = str.length();
+        String p = str.substring(k-2);
+        String o = p+p+p;
+        return o;
     }
 
     /*
@@ -185,7 +186,7 @@ public class String1
     public String middleThree(String str) {
         int k = str.length();
         if (k > 3){
-            String p = str.substring(1,4);
+            String p = str.substring(k/3,k - k/3);
             return p;
         }
         else {
@@ -222,7 +223,14 @@ public class String1
      * left2("Hi") → "Hi"
      */
     public String left2(String str) {
-        return unimplemented;
+        int k = str.length();
+        if (k>2){
+            String p = str.substring(2) + str.substring(0,2);
+            return p;
+        }else{
+            String h = str;
+            return h;
+        }
     }
 
     /*
@@ -234,6 +242,9 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
+        //if (str.equals(badxx)){
+            
+        //}
         return false;
     }
 
