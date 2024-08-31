@@ -242,10 +242,15 @@ public class String1
      * hasBad("xxbadxx") → false
      */
     public boolean hasBad(String str) {
-        //if (str.equals(badxx)){
-            
-        //}
-        return false;
+        String p = str.substring(1);
+        String k = str.substring(0);
+        
+        if (p.equals("badxx") || k.equals("badxx")){
+            return true;
+        }else {
+            return false;
+        }
+        
     }
 
     /*
@@ -257,7 +262,22 @@ public class String1
      * conCat("abc", "") → "abc"
      */
     public String conCat(String a, String b) {
-        return unimplemented;
+        int alength = a.length();
+        int blength = b.length();
+        String c = (a.substring(alength-1));
+        
+        if (blength >1){
+            if (c.equals(b.substring(0,1))){
+            String k = a.substring(0,alength-1) + b;
+            return k;
+        }else{
+            String p = a+b;
+            return p;
+        }}
+        else {
+        String h = a+b;
+        return h;
+        }
     }
 
     /*
@@ -271,7 +291,16 @@ public class String1
      *minCat("java", "Hello") → "javaello"
      */
     public String minCat(String a, String b) {
-        return unimplemented;
+        int alength = a.length();
+        int blength = b.length();
+        if (alength > blength){
+            String fin = a.substring(alength-blength)+b;
+            return fin;
+        }else {
+            String notFin = a+b.substring(blength-alength);
+            return notFin;
+        }
+        
     }
 
     /*
@@ -282,7 +311,23 @@ public class String1
      * withoutX("Hxix") → "Hxi"
      */
     public String withoutX(String str) {
-        return unimplemented;
+        int p = str.length();
+        String k = str.substring(0,1);
+        String h = str.substring(p-1);
+        
+        if (k.equals("x") && h.equals("x")){
+            String okay = str.substring(1, p-1);
+            return okay;
+        } else if (k.equals("x")){
+            String okay2 = str.substring(1,p);
+            return okay2;
+        } else if (h.equals("x")){
+            String okay3 = str.substring(0,p-1);
+            return okay3;
+        }else {
+            return str;
+        }
+        
     }
 
     /*
@@ -294,7 +339,23 @@ public class String1
      * deFront("java") → "va"
      * deFront("away") → "aay"
      */
-    public String deFront(String str) {    
+    public String deFront(String str) { 
+        int b = str.length();
+        if (b>2){
+            if (str.substring(0,1).equals("a") && str.substring(1,2).equals("b") ){
+                String p = str.substring(0);
+                return p;
+            } 
+            else if (str.substring(0,1).equals("a")){
+                String o = str.substring(0,1)+ str.substring(2);
+                return o;
+            }else if (str.substring(2,3).equals("b")){
+                String okay = str.substring(2);
+            }else{
+                String h = str.substring(2);
+                return h;
+            }
+        }
         return unimplemented;
     }
 
