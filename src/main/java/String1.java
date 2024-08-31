@@ -13,6 +13,7 @@ public class String1
         System.out.println(s.makeOutWord("<<>>", "Yay"));
         System.out.println(s.extraEnd("Hello"));
         System.out.println(s.firstTwo("Hello"));
+        System.out.println(s.firstHalf("abcdef"));
         System.out.println(s.withoutEnd("Hello"));
         System.out.println(s.comboString("hi", "Hello"));
         System.out.println(s.middleThree("Candy"));
@@ -132,7 +133,7 @@ public class String1
         int k = str.length();
         int halfk = k/2;
         
-        String p = str.substring(0,halfk+1);
+        String p = str.substring(0,halfk);
         return p;
     }
 
